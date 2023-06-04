@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualização de Funcionário - ERP</title>
+</head>
+<body>
+    <h1>Atualização de Funcionário</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form }}
+
+        <button type="submit">Atualizar Funcionário</button>
+    </form>
+</body>
+</html>

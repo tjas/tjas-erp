@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Produtos - ERP</title>
+</head>
+<body>
+    <h1>Lista de Produtos Cadastrados</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Imagem do Produto</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produto in produtos  %}
+                <tr>
+                    <td>{{ produto.id }}</td>
+                    <td>
+                        <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" width="100px">
+                    </td>
+                    <td>{{ produto.nome }}</td>
+                    <td>{{ produto.descricao }}</td>
+                    <td>{{ produto.preco }}</td>
+                    <td>
+                        <a href="{% url 'erp:atualiza_produto' pk=produto.id %}">Atualizar</a>
+                        <a href="{% url 'erp:deleta_produto' pk=produto.id %}">Deletar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

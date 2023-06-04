@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Funcionários - ERP</title>
+</head>
+<body>
+    <h1>Lista de Funcionários</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>CPF</th>
+                <th>Email Funcional</th>
+                <th>Remuneração</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for funcionario in funcionarios %}
+                <tr>
+                    <td>{{ funcionario.id }}</td>
+                    <td>{{ funcionario.nome }}</td>
+                    <td>{{ funcionario.sobrenome }}</td>
+                    <td>{{ funcionario.cpf }}</td>
+                    <td>{{ funcionario.email_funcional }}</td>
+                    <td>{{ funcionario.remuneracao }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

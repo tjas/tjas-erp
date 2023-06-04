@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atualização de Produto - ERP</title>
+</head>
+<body>
+    <h1>Formulário de Atualização de Produto</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}" width="400px">
+
+        {{ form }}
+
+        <button type="submit">Atualizar Produto</button>
+    </form>
+</body>
+</html>

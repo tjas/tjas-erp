@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deleção de Venda - ERP</title>
+</head>
+<body>
+    {% if venda %}
+        <h1>Deleção de Venda</h1>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <p>Você confirma a deleção da Venda do "{{ venda.produto.nome }}" feita por "{{ venda.funcionario.nome }} {{ venda.funcionario.sobrenome }}"?</p>
+
+            <button type="submit">Confirmar Deleção</button>
+        </form>
+    {% else %}
+        <h1>Venda com este ID não encontrada!</h1>
+    {% endif %}
+</body>
+</html>
