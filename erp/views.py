@@ -10,9 +10,16 @@ from erp.forms import FuncionarioForm, ProdutoForm
 from erp.models import Funcionario, Produto, Venda
 
 
+# Home
+class HomeView(TemplateView):
+    template_name = 'erp/index.html'
+
+
+# Login
+
 class ErpLoginView(LoginView):
     template_name = 'erp/login.html'
-    success_url = reverse_lazy('erp: dashboard')
+    success_url = reverse_lazy('erp:dashboard')
     redirect_authenticated_user = True
 
 
@@ -20,13 +27,11 @@ class ErpLogoutView(LogoutView):
     template_name = 'erp/logout.html'
 
 
-class HomeView(TemplateView):
-    template_name = 'erp/index.html'
-
-
 class DashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'erp/dashboard.html'
 
+
+# Funcionarios
 
 @login_required
 def cria_funcionario(requisicao: HttpRequest):
@@ -98,6 +103,8 @@ def atualiza_funcionario(requisicao: HttpRequest, pk: int):
             return HttpResponseRedirect(redirect_to=f'/funcionarios/detalhe/{pk}')
 
 
+# Produtos
+
 class ProdutoCreateView(LoginRequiredMixin, CreateView):
     template_name = 'erp/produtos/novo.html'
     model = Produto
@@ -142,6 +149,8 @@ class ProdutoDeleteView(LoginRequiredMixin, DeleteView):
         except Http404:
             return None
 
+
+# Vendas
 
 class VendaCreateView(LoginRequiredMixin, CreateView):
     model = Venda
