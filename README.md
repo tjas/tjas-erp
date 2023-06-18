@@ -18,7 +18,7 @@
 
 > ⭐ Mark the project with a star. 👀 Watch the project for receive news.
 >
-> 🇧🇷 Acesse a versão em [Português do Brasil](./README_pt-br.md) desta página.
+> 🇧🇷 Acesse esta página em [Português do Brasil](./README_pt-br.md).
 <!-- >
 > 🌐 Access my personal website: [thiago-tjas.com](http://thiago-tjas.com/) -->
 

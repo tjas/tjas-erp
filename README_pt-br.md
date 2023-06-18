@@ -18,7 +18,7 @@
 
 > ⭐ Marque o projeto com uma estrela. 👀 Acompanhe o projeto para receber novidades.
 >
-> 🇺🇸 Access the [US English](./README.md) version of this page.
+> 🇺🇸 Access this page in [US English](./README.md).
 <!-- >
 > 🌐 Acesse meu site pessoal: [thiago-tjas.com](http://thiago-tjas.com/) -->
 
